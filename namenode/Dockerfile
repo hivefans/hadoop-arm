@@ -5,7 +5,7 @@ LABEL maintainer="cgiraldo@gradiant.org"
 LABEL organization="gradiant.org"
 
 COPY run.sh /run.sh
-
+RUN chmod +x /run.sh
 ENV CLUSTER_NAME hadoop
 ENV HDFS_CONF_dfs_namenode_name_dir=file:///hadoop/dfs/name
 RUN adduser -D -S -u 1000 -G root hdfs && \
